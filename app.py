@@ -27,13 +27,13 @@ import os
 
 path = os.path.dirname(__file__)
 
-data = pd.read_csv(path+'\diabetes.csv')
+data = pd.read_csv(path+'/diabetes.csv')
 
 # HEADINGS
 st.title('Diabidict - Diabetes Prediction')
 st.sidebar.header('Patient Data')
 
-image = Image.open(path+'\intro.png')
+image = Image.open(path+'/intro.png')
 st.image(image)
 
 st.subheader('Training Data Stats')
