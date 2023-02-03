@@ -23,14 +23,17 @@ warnings.filterwarnings('ignore')
 import streamlit as st
 from PIL import Image
 from sklearn.metrics import accuracy_score
+import os
 
-data = pd.read_csv(r'D:\open source\Complete WebD\Diabetes Prediction\diabetes.csv')
+path = os.path.dirname(__file__)
+
+data = pd.read_csv(path+'D:\open source\Complete WebD\Diabetes Prediction\diabetes.csv')
 
 # HEADINGS
 st.title('Diabidict - Diabetes Prediction')
 st.sidebar.header('Patient Data')
 
-image = Image.open('intro.png')
+image = Image.open(path+'intro.png')
 st.image(image)
 
 st.subheader('Training Data Stats')
